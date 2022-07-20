@@ -1,0 +1,34 @@
+.container{
+        padding: 0 2rem;
+        text-align: center;
+        margin-top: 50px;
+        justify-content: center;
+}
+
+.img {
+        border-radius: 40%;
+}
+
+.description{
+        font-size: 25px;
+        padding: 2rem;
+
+}
+
+.personal_info{
+        border: 1px soild red;
+        text-align: flex;
+        padding: 0 0 5rem 0;
+}
+
+.skills{
+        padding: 50px;
+}
+
+.img{
+        border-radius: 50%;
+}
+
+.title_name{
+        font-size: 48px;
+}

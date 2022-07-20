@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Hi, I am JeongHyun Heo</h1>
         <div className={styles.space}>
-          <Link href={"/home"}><Image src={profilePic} className={styles.img} height={300} width={300}/></Link>
+          <Link href={"/about"}><Image src={profilePic} className={styles.img} height={300} width={300}/></Link>
         </div>
         <h2>
           If you want to know more about me, click the picture!
@@ -29,16 +29,11 @@ export default function Home() {
           click one of these cards:
         </h2>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Contact &rarr;</h2>
-            <p></p>
+          <a className={styles.card}>
+            <Link href="/about"><h2>About Me &rarr;</h2></Link>
           </a>
-          <a
-            href="#"
-            className={styles.card}
-          >
-            <h2>About Me &rarr;</h2>
-            <p></p>
+          <a className={styles.card}>
+            <Link href="/interests"><h2>My<br/>interests<br/>&rarr;</h2></Link>
           </a>
         </div>
       </main>
