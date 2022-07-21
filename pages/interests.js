@@ -1,6 +1,4 @@
-import Layout from '../components/layout'
-import Sidebar from '../components/sidebar'
-import styleAbout from '../styles/about.module.css'
+
 import Image from 'next/image'
 import Archery from '../img/interests/hobby/archery.jpeg'
 import Composing from '../img/interests/hobby/composing.jpeg'
@@ -13,26 +11,26 @@ import Writing from '../img/interests/hobby/writing.jpeg'
 
 export default function Interests() {
     return (
-        <div className={styleAbout.container}>
+        <div className="text-center p-16">
             <header>
-                <h1 className={styleAbout.title_name}>Interests</h1>
+                <h1 className="text-[48px]">Interests</h1>
             </header>
             <main>
-                <div className={styleAbout.skills}>
+                <div className="p-[50px]">
                     <h4>Sports</h4>
-                    <Image src={Archery} className={styleAbout.img} height={150} width={150} alt="archery" />&nbsp;&nbsp;&nbsp;
-                    <Image src={IceSkating} className={styleAbout.img} height={150} width={150} alt="iceskating" />&nbsp;&nbsp;&nbsp;
-                    <Image src={Swimming} className={styleAbout.img} height={150} width={150} alt="swimming" />&nbsp;&nbsp;&nbsp;
-                    <Image src={Volleyball} className={styleAbout.img} height={150} width={150} alt="volleyball" />&nbsp;&nbsp;&nbsp;
+                    <Image src={Archery} className="rounded-[40%]" height={150} width={150} alt="Archery" />&nbsp;&nbsp;&nbsp;
+                    <Image src={IceSkating} className="rounded-[40%]" height={150} width={150} alt="Iceskating" />&nbsp;&nbsp;&nbsp;
+                    <Image src={Swimming} className="rounded-[40%]" height={150} width={150} alt="Swimming" />&nbsp;&nbsp;&nbsp;
+                    <Image src={Volleyball} className="rounded-[40%]" height={150} width={150} alt="Volleyball" />&nbsp;&nbsp;&nbsp;
                 </div>
-                <div className={styleAbout.skills}>
+                <div className="p-[50px]">
                     <h4>Literature & Music</h4>
-                    <Image src={Composing} className={styleAbout.img} height={150} width={150} alt="composing" />&nbsp;&nbsp;&nbsp;
-                    <Image src={Piano} className={styleAbout.img} height={150} width={150} alt="piano" />&nbsp;&nbsp;&nbsp;
-                    <Image src={Violin} className={styleAbout.img} height={150} width={150} alt="violin"/>&nbsp;&nbsp;&nbsp;
-                    <Image src={Writing} className={styleAbout.img} height={150} width={150} alt="writing"/>&nbsp;&nbsp;&nbsp;
+                    <Image src={Composing} className="rounded-[40%]" height={150} width={150} alt="Composing" />&nbsp;&nbsp;&nbsp;
+                    <Image src={Piano} className="rounded-[40%]" height={150} width={150} alt="Piano" />&nbsp;&nbsp;&nbsp;
+                    <Image src={Violin} className="rounded-[40%]" height={150} width={150} alt="Violin"/>&nbsp;&nbsp;&nbsp;
+                    <Image src={Writing} className="rounded-[40%]" height={150} width={150} alt="Writing"/>&nbsp;&nbsp;&nbsp;
                 </div>
-                <div className={styleAbout.skills}>
+                <div className="p-[50px]">
                     <h4>I feel most comfortable when......</h4>
 
                 </div>
