@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="p-16 flex-col items-center justify-center text-center">
         {/* min-h-screen p-16 flex flex-col align-middle justify-items-center */}
-        <h1 className="text-title">Hi, I am JeongHyun Heo</h1>
+        <h1 className="text-title sm:text-left lg:text-center">Hi, I am JeongHyun Heo</h1>
         <div className={"p-[40px]"}>
           <Link href={"/about"}><Image src={profilePic} className="rounded-[40%]" height={300} width={300} alt="profile"/></Link>
         </div>
