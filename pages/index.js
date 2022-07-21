@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '../img/IMG_4104.JPG'
 import Link from 'next/link'
+import { Router, useRouter } from 'next/router'
+
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className="md:container md:mx-auto">
       <Head>
@@ -28,15 +32,16 @@ export default function Home() {
           click one of these cards:
         </h2>
         <div className="grid gap-4 grid-cols-2 p-4">
-          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => {
+            router.push('/about');
+          }}>
             <Link href="/about">
               About Me &rarr;
             </Link>
           </button>
-          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-            <Link href="/interests" style={{ textDecoration: 'none' }} >
+          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => {
+            router.push('/interests');}}>
               My interests &rarr;
-            </Link>
           </button>
         </div>
       </main>
