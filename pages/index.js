@@ -28,12 +28,12 @@ export default function Home() {
           click one of these cards:
         </h2>
         <div className="grid gap-4 grid-cols-2 p-4">
-          <button class="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
             <Link href="/about">
               About Me &rarr;
             </Link>
           </button>
-          <button class="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
             <Link href="/interests" style={{ textDecoration: 'none' }} >
               My interests &rarr;
             </Link>
