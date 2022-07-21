@@ -35,9 +35,7 @@ export default function Home() {
           <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => {
             router.push('/about');
           }}>
-            <Link href="/about">
-              About Me &rarr;
-            </Link>
+            About Me &rarr;
           </button>
           <button className="bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => {
             router.push('/interests');}}>
