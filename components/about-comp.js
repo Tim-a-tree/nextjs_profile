@@ -18,7 +18,7 @@ const Programming_Skills = () => {
                         {
                                 "/{image{i}}"
                         }
-                })} height={150} width={150}/>
+                })} height={150} width={150} alt="pics"/>
         )
 }
 

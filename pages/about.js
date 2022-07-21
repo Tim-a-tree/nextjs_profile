@@ -17,7 +17,7 @@ export default function About() {
                 <h1 className={styleAbout.title_name}>About Me</h1>
             </header>
             <main>
-                <Image src={profilePic} className={styleAbout.img} height={300} width={300} />
+                <Image src={profilePic} className={styleAbout.img} height={300} width={300} alt="profile"/>
                 <div className={styleAbout.description}>
                     <h3>JeongHyun Heo</h3>
                     <p>A student, a writer, a musician</p>
@@ -28,12 +28,12 @@ export default function About() {
                     <h5>Majoring in:  Computer Science</h5>
                     <div className={styleAbout.skills}>
                         <h4>Skills</h4>
-                        <Image src={C} className={styleAbout.img} height={150} width={150}/>&nbsp;&nbsp;&nbsp;
-                        <Image src={Cpp} height={150} width={150}/>&nbsp;&nbsp;&nbsp;
-                        <Image src={Java} className={styleAbout.img} height={150} width={150}/>&nbsp;&nbsp;&nbsp;
-                        <Image src={Html} className={styleAbout.img} height={150} width={150}/>&nbsp;&nbsp;&nbsp;
-                        <Image src={JS} className={styleAbout.img} height={150} width={150}/>&nbsp;&nbsp;&nbsp;
-                        <Image src={Python} className={styleAbout.img} height={150} width={150}/>
+                        <Image src={C} className={styleAbout.img} height={150} width={150} alt="c"/>&nbsp;&nbsp;&nbsp;
+                        <Image src={Cpp} height={150} width={150} alt="cpp"/>&nbsp;&nbsp;&nbsp;
+                        <Image src={Java} className={styleAbout.img} height={150} width={150} alt="java"/>&nbsp;&nbsp;&nbsp;
+                        <Image src={Html} className={styleAbout.img} height={150} width={150} alt="html"/>&nbsp;&nbsp;&nbsp;
+                        <Image src={JS} className={styleAbout.img} height={150} width={150} alt="js"/>&nbsp;&nbsp;&nbsp;
+                        <Image src={Python} className={styleAbout.img} height={150} width={150} alt="python"/>
                     </div>
                     <div>
                         <h4>Languages</h4>

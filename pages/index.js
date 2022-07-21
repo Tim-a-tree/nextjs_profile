@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Hi, I am JeongHyun Heo</h1>
         <div className={styles.space}>
-          <Link href={"/about"}><Image src={profilePic} className={styles.img} height={300} width={300}/></Link>
+          <Link href={"/about"}><Image src={profilePic} className={styles.img} height={300} width={300} alt="profile"/></Link>
         </div>
         <h2>
           If you want to know more about me, click the picture!
