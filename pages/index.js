@@ -1,13 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import profilePic from '../img/IMG_4104.JPG'
 import Link from 'next/link'
 import { Router, useRouter } from 'next/router'
 
-
 export default function Home() {
   const router = useRouter();
-
   return (
     <div className="md:container md:mx-auto">
       <Head>
@@ -20,7 +17,7 @@ export default function Home() {
         {/* min-h-screen p-16 flex flex-col align-middle justify-items-center */}
         <h1 className="text-title sm:text-left lg:text-center">Hi, I am JeongHyun Heo</h1>
         <div className={"p-[40px]"}>
-          <Link href={"/about"}><Image src={profilePic} className="rounded-[40%]" height={300} width={300} alt="profile"/></Link>
+          <Link href={"/about"}><Image src='/IMG_4104.JPG' className="rounded-[40%]" height={300} width={300} alt="profile"/></Link>
         </div>
         <h2>
           If you want to know more about me, click the button!
