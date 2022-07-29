@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../styles/navbar.module.css";
+import { FaGithub } from 'react-icons/fa'
 
 const Navbar = () => {
         return (
@@ -24,7 +25,8 @@ const Navbar = () => {
 
 const Logo = () => {
         return (
-                <Image src='/logo_name.png' alt='logo_name' height={100} width={450}/>
+                <Image src='/logo_name.png' alt='logo_name' height={100} width={450} />
         )
 }
+
 export default Navbar;
