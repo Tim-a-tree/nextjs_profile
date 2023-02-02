@@ -1,10 +1,10 @@
 import { Container, Box, Heading, Stack, Badge, Tabs, Tab, TabList } from "@chakra-ui/react";
 import AboutMe from "../components/about";
-import SkillStacks from "../components/stacks";
+import SkillStacks from "../components/skills";
 
 const IndexPage = () => {
   return (
-    <Container>
+    <Container maxW='container.sm'>
       <Box border={1} borderColor="red.500" p={4} m={4}>
         Hello, I am JeongHyun Heo, a software engineer.
       </Box>
@@ -34,7 +34,7 @@ const IndexPage = () => {
         <Heading as = "h3" size="md" mb={4} variant="section-title">
           Stacks
         </Heading>
-        <SkillStacks/>
+        <SkillStacks />
       </Box>
 
 
