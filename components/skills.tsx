@@ -1,4 +1,4 @@
-import { TabList, TabPanels, Tabs, Tab, TabPanel, Stack, Badge, Container } from '@chakra-ui/react'
+import { TabList, TabPanels, Tabs, Tab, TabPanel, Stack, Badge, Container, SimpleGrid } from '@chakra-ui/react'
 
 function SkillStacks() {
     function CreateTabs({ data }) {
