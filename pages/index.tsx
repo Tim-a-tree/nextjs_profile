@@ -8,7 +8,6 @@ const IndexPage = () => {
     <Container maxW='container.sm'>
       <NavBar/>
       <Box border={1} borderColor="red.500" p={4} m={4}>
-        Hello, I am JeongHyun Heo, a software engineer.
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box>

@@ -1,9 +1,10 @@
-import { Flex, Text, Container, Box, Stack, Button, Divider } from "@chakra-ui/react";
+import { Flex, Text, Container, Box, Stack, Button, Divider, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 
 const Navbar = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Flex as="nav" align="left" justify="space-between" wrap="wrap" bg="whiteAlpha.300" color="black">
+        <Flex as="nav" align="left" justify="space-between" wrap="wrap" bg="whiteAlpha">
 
             <Box
                 display={{ sm: 'none', md: 'flex' }}
@@ -32,6 +33,9 @@ const Navbar = () => {
                         Gears/Tools/Stacks
                     </Link>
                 </Stack>
+                <Button onClick={toggleColorMode} ml={4}>
+                    Toggle {colorMode === "light" ? "Dark" : "Light"}
+                </Button>
             </Box>
         </Flex>
     )
