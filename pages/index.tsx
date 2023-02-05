@@ -10,10 +10,9 @@ const IndexPage = () => {
   return (
     <Container maxW='container.sm'>
       <NavBar/>
-      <Box border={1} borderColor="red.500" p={4} m={4}>
-      </Box>
+      <Divider/>
       <Box display={{ md: 'flex' }}>
-        <Box>
+        <Box p={4}>
           <Heading as="h2" size="lg" mb={4} variant="page-title">
             JeongHyun(Tim) Heo
           </Heading>
@@ -23,7 +22,7 @@ const IndexPage = () => {
             <Badge color='red'>Musician</Badge>
             <Badge color='blue'>...and more to come</Badge>
           </Stack> */}
-          <Typing/>
+          <Typing />
         </Box>
       </Box>
       <AboutMe>
