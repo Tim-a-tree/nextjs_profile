@@ -2,8 +2,11 @@ import { Container, Box, Heading, Stack, Badge, Card, Button, ButtonGroup, CardB
 import AboutMe from "../components/about";
 import SkillStacks from "../components/skills";
 import NavBar from "../components/navbar";
+import Typing from "../components/typing";
+
 
 const IndexPage = () => {
+  
   return (
     <Container maxW='container.sm'>
       <NavBar/>
@@ -14,12 +17,13 @@ const IndexPage = () => {
           <Heading as="h2" size="lg" mb={4} variant="page-title">
             JeongHyun(Tim) Heo
           </Heading>
-          <Stack direction='row' paddingBlock={4}>
+          {/* <Stack direction='row' paddingBlock={4}>
             <Badge color='green'>Software Engineer</Badge>
             <Badge color='orange'>Web/App Developer</Badge>
             <Badge color='red'>Musician</Badge>
             <Badge color='blue'>...and more to come</Badge>
-          </Stack>
+          </Stack> */}
+          <Typing/>
         </Box>
       </Box>
       <AboutMe>
