@@ -2,24 +2,27 @@ import { Container, Box, Heading, Stack, Badge, Card, Button, ButtonGroup, CardB
 import AboutMe from "../components/about";
 import SkillStacks from "../components/skills";
 import NavBar from "../components/navbar";
+import Typing from "../components/typing";
+
 
 const IndexPage = () => {
+  
   return (
     <Container maxW='container.sm'>
       <NavBar/>
-      <Box border={1} borderColor="red.500" p={4} m={4}>
-      </Box>
+      <Divider/>
       <Box display={{ md: 'flex' }}>
-        <Box>
+        <Box p={4}>
           <Heading as="h2" size="lg" mb={4} variant="page-title">
             JeongHyun(Tim) Heo
           </Heading>
-          <Stack direction='row' paddingBlock={4}>
+          {/* <Stack direction='row' paddingBlock={4}>
             <Badge color='green'>Software Engineer</Badge>
             <Badge color='orange'>Web/App Developer</Badge>
             <Badge color='red'>Musician</Badge>
             <Badge color='blue'>...and more to come</Badge>
-          </Stack>
+          </Stack> */}
+          <Typing />
         </Box>
       </Box>
       <AboutMe>
