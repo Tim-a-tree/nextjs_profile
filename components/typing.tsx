@@ -10,7 +10,7 @@ const content = [
 ]
 const Typing = () => {
     return (
-        <Code bg="black" w='100%' p={4} color='white'>
+        <Code bg="black" w='100%' p={4} color='white' borderRadius='lg'>
             <TypeAnimation
                 sequence={content}
                 cursor={true}

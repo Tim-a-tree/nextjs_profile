@@ -1,16 +1,17 @@
-import { Container, Box, Heading, Stack, Badge, Card, Button, ButtonGroup, CardBody, CardFooter, Divider, Text, Image, SimpleGrid, Stat, StatNumber, StatLabel, useColorMode, StatGroup, StatHelpText } from "@chakra-ui/react";
+import { Container, Box, Heading, Stack, Badge, Card, Button, ButtonGroup, CardBody, CardFooter, Divider, Text, Image, SimpleGrid, Stat, StatNumber, StatLabel, useColorMode, StatGroup, StatHelpText, WrapItem, Avatar } from "@chakra-ui/react";
 import AboutMe from "../components/about";
 import SkillStacks from "../components/skills";
 import NavBar from "../components/navbar";
 import Typing from "../components/typing";
-
+import { FaGithub, FaLink } from 'react-icons/fa';
+import Link from "next/link";
 
 const IndexPage = () => {
-  
+
   return (
     <Container maxW='container.sm'>
-      <NavBar/>
-      <Divider/>
+      <NavBar />
+      <Divider />
       <Box display={{ md: 'flex' }}>
         <Box p={4}>
           <Heading as="h2" size="lg" mb={4} variant="page-title">
@@ -52,7 +53,7 @@ const IndexPage = () => {
               <CardBody>
                 <Image
                   src=''
-                  alt='Green double couch with wooden legs'
+                  alt=''
                   borderRadius='lg'
                 />
                 <Stack mt='6' spacing='3'>
@@ -60,7 +61,7 @@ const IndexPage = () => {
                   <Text>
                     SPI is a java based application that fixes the buggy code of entered code.
                   </Text>
-                  <Divider/>
+                  <Divider />
                   <Stat>
                     <StatLabel>Program</StatLabel>
                     <StatHelpText>Development Period</StatHelpText>
@@ -70,15 +71,18 @@ const IndexPage = () => {
               </CardBody>
               <Divider />
               <CardFooter>
-                <ButtonGroup spacing='2'>
-                </ButtonGroup>
+                <Link href="https://github.com/S0rrow/SPI">
+                  <Button leftIcon={<FaGithub />}>
+                    Github
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
             <Card maxW='sm'>
               <CardBody>
                 <Image
                   src=''
-                  alt='Green double couch with wooden legs'
+                  alt=''
                   borderRadius='lg'
                 />
                 <Stack mt='6' spacing='3'>
@@ -88,7 +92,7 @@ const IndexPage = () => {
                   <Text>
                     This project is to analyze the results of ConFix execution through correct patch change information.
                   </Text>
-                  <Divider/>
+                  <Divider />
                   <Stat>
                     <StatLabel>Analysis Paper</StatLabel>
                     <StatHelpText>Published</StatHelpText>
@@ -98,8 +102,16 @@ const IndexPage = () => {
               </CardBody>
               <Divider />
               <CardFooter>
-                <ButtonGroup spacing='2'>
-                </ButtonGroup>
+                <Box>
+                <Link href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113812">
+                  <Button leftIcon={<FaLink/>}>
+                    Link
+                  </Button>
+                </Link>
+                </Box>
+                <Text pl={4} fontSize='xs'>
+                  This paper is written in Korean.
+                </Text>
               </CardFooter>
             </Card>
           </SimpleGrid>

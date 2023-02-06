@@ -1,5 +1,7 @@
 import { Flex, Text, Container, Box, Stack, Button, Divider, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
+import { BsFillSunFill } from "react-icons/bs";
+import { MdNightlight } from "react-icons/md";
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -34,7 +36,7 @@ const Navbar = () => {
                     </Link>
                 </Stack>
                 <Button onClick={toggleColorMode} ml={4}>
-                    Toggle {colorMode === "light" ? "Dark" : "Light"}
+                    {colorMode === "light" ? <MdNightlight /> : <BsFillSunFill />}
                 </Button>
             </Box>
         </Flex>
