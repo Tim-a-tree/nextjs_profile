@@ -9,15 +9,15 @@ const Navbar = () => {
         <Flex as="nav" align="left" justify="space-between" wrap="wrap" bg="whiteAlpha">
 
             <Box
-                display={{ sm: 'none', md: 'flex' }}
+                display={{ sm: 'flex', md: 'flex', lg: 'flex' }}
                 width={{ sm: 'full', md: 'auto' }}
-                alignItems="center"
+                alignItems={{ sm: 'flex-start', md: 'center' }}
                 flexGrow={1}
             >
-                <Stack direction='row' spacing={4} align='center'>
                     <Flex align="left" mr={5}>
                         <Text fontSize="xl" fontWeight="bold"> JeongHyun(Tim) Heo</Text>
                     </Flex>
+                <Stack direction='row' spacing={4} align='center'>
                     <Divider orientation="vertical" />
                     <Link href="">
                         About
@@ -35,10 +35,10 @@ const Navbar = () => {
                         Gears/Tools/Stacks
                     </Link>
                 </Stack>
-                <Button onClick={toggleColorMode} ml={4}>
-                    {colorMode === "light" ? <MdNightlight /> : <BsFillSunFill />}
-                </Button>
             </Box>
+            <Button onClick={toggleColorMode} ml={4} position= 'absolute' top='1rem' right='1rem'>
+                {colorMode === "light" ? <MdNightlight /> : <BsFillSunFill />}
+            </Button>
         </Flex>
     )
 };
