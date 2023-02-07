@@ -1,4 +1,4 @@
-import { TabList, TabPanels, Tabs, Tab, TabPanel, Stack, Badge, Container, SimpleGrid } from '@chakra-ui/react'
+import { TabList, TabPanels, Tabs, Tab, TabPanel, Stack, Badge, Container, SimpleGrid, Center } from '@chakra-ui/react'
 
 function SkillStacks() {
     function CreateTabs({ data }) {
@@ -13,11 +13,15 @@ function SkillStacks() {
                     <TabPanels>
                         {data.map((tab, index) => (
                             <TabPanel p={4} key={index}>
-                                <Stack as="span" key={index} direction='row' paddingBlock={4}>
-                                {tab.contents.map((content) => (
-                                        <Badge key={index} color={RandomColors()} >{content}</Badge>
-                                ))}
-                                </Stack>
+                                <Center>
+                                    <Stack as="span" key={index} direction='row' paddingBlock={4}>
+                                        <SimpleGrid columns={5} spacing={3}>
+                                            {tab.contents.map((content) => (
+                                                    <Badge textAlign={'center'} key={index} color={RandomColors()} >{content}</Badge>
+                                            ))}    
+                                        </SimpleGrid>
+                                    </Stack>
+                                </Center>
                             </TabPanel>
                         ))}
                     </TabPanels>
@@ -37,20 +41,16 @@ function SkillStacks() {
             contents: ['Python', 'Java', 'C++']
         },
         {
-            label: 'frontend',
-            contents: ['HTML', 'CSS'],
+            label: 'frontend/backend',
+            contents: ['HTML', 'CSS', 'Node.js', 'Django', 'JavaScript', 'TypeScript'],
         },
         {
-            label: 'backend',
-            contents: ['Node.js', 'Django'],
-        },
-        {
-            label: "Frameworks",
+            label: "Frameworks/Tools",
             contents: ['React', 'Next.js', 'Flutter', 'Slack', 'Jira', 'Git'],
         },
         {
             label: "Interests",
-            contents: ['JavaScript', 'TypeScript', 'Unreal Engine', 'Kubernetes', 'Docker', 'AWS', 'Flutter', 'Supabase', 'Spring'],
+            contents: [, 'Unreal Engine', 'Kubernetes', 'Docker', 'AWS', 'Flutter', 'Supabase', 'Spring', 'Swift'],
         },
     ]
 
