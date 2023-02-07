@@ -1,6 +1,7 @@
 import { TabList, TabPanels, Tabs, Tab, TabPanel, Stack, Badge, Container, SimpleGrid, Center } from '@chakra-ui/react'
 
 function SkillStacks() {
+    let initialColor = 'red'
     function CreateTabs({ data }) {
         return (
             <Container>
@@ -17,7 +18,7 @@ function SkillStacks() {
                                     <Stack as="span" key={index} direction='row' paddingBlock={4}>
                                         <SimpleGrid columns={5} spacing={3}>
                                             {tab.contents.map((content) => (
-                                                    <Badge textAlign={'center'} key={index} color={RandomColors()} >{content}</Badge>
+                                                    <Badge textAlign={'center'} key={index} color={initialColor = RandomColors(initialColor)} >{content}</Badge>
                                             ))}    
                                         </SimpleGrid>
                                     </Stack>
@@ -30,9 +31,16 @@ function SkillStacks() {
         )
     }
 
-    function RandomColors() {
-        const colors = ['green', 'orange', 'red', 'blue', 'purple', 'teal']
-        return colors[Math.floor(Math.random() * colors.length)]
+    function RandomColors(initialColor: String) {
+        const colors = ['green', 'orange', 'red', 'blue', 'purple', 'teal', 'pink.500']
+        // return colors[Math.floor(Math.random() * colors.length)]
+        let color = colors[Math.floor(Math.random() * colors.length)]
+        while (color === initialColor) {
+            color = colors[Math.floor(Math.random() * colors.length)]
+        }
+        return color
+
+
     }
 
     const Data = [
