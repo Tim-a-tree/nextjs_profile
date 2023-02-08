@@ -10,7 +10,7 @@ const Main = ({ children, router }) => {
                 <meta name="description" content="JeongHyun(Tim) Heo's profile page" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <Container maxW="container.md" pt={14}>
+            <Container maxW='-webkit-max-content' pt={14}>
                 {children}
             </Container>
         </Box>

@@ -2,6 +2,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/main'
 import * as React from 'react'
+import '../styles/style.css';
+
 
 function MyApp({ Component, pageProps, router }) {
   return (

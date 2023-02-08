@@ -5,6 +5,7 @@ import NavBar from "../components/navbar";
 import Typing from "../components/typing";
 import { FaGithub, FaLink } from 'react-icons/fa';
 import Link from "next/link";
+import GitStatus from "../components/git_status";
 
 const IndexPage = () => {
 
@@ -39,6 +40,12 @@ const IndexPage = () => {
           Stacks
         </Heading>
         <SkillStacks />
+      </Box>
+      <Box>
+        <Heading as="h3" size="md" mb={4} variant="section-title">
+          Current Status
+        </Heading>
+        <GitStatus/>
       </Box>
       <Box>
         <Heading as="h3" size="md" mb={4} variant="section-title">
@@ -118,6 +125,9 @@ const IndexPage = () => {
           <Heading as="h4" size="md" mb={4} variant="section-title">
             Personal Projects
           </Heading>
+          <Link href="/overview">
+            <Button colorScheme='blue' variant='outline' size='sm'/>
+          </Link>
         </Box>
       </Box>
     </Container>
