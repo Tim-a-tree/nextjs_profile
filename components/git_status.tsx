@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
+import React from "react";
 
 // get git status from github api
 const getUser = async () => {
@@ -49,6 +50,7 @@ async function getWeeklyGitCommits() {
 
 
 
+
 const GitStatus = () => {
 
     const [user, setUser] = useState();
@@ -59,7 +61,7 @@ const GitStatus = () => {
             const user = await getUser();
             setUser(user);
             const weeklyCommits = await getWeeklyGitCommits();
-            setWeeklyCommits(weeklyCommits);
+            // setWeeklyCommits(weeklyCommits);
         }
         fetchData();
     }, []);

@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/linechart.jsx"  ],
   "exclude": [
     "node_modules"
   ]

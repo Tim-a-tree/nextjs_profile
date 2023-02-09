@@ -4,8 +4,286 @@ import SkillStacks from "../components/skills";
 import NavBar from "../components/navbar";
 import Typing from "../components/typing";
 import { FaGithub, FaLink } from 'react-icons/fa';
+import LineChart from "../components/linechart";
 import Link from "next/link";
 import GitStatus from "../components/git_status";
+
+import dynamic from "next/dynamic";
+import MyResponsiveLine from "../components/linechart";
+import { useState } from "react";
+
+const data = [
+  {
+    "id": "japan",
+    "color": "hsl(36, 70%, 50%)",
+    "data": [
+      {
+        "x": "plane",
+        "y": 115
+      },
+      {
+        "x": "helicopter",
+        "y": 138
+      },
+      {
+        "x": "boat",
+        "y": 131
+      },
+      {
+        "x": "train",
+        "y": 215
+      },
+      {
+        "x": "subway",
+        "y": 76
+      },
+      {
+        "x": "bus",
+        "y": 269
+      },
+      {
+        "x": "car",
+        "y": 221
+      },
+      {
+        "x": "moto",
+        "y": 188
+      },
+      {
+        "x": "bicycle",
+        "y": 99
+      },
+      {
+        "x": "horse",
+        "y": 19
+      },
+      {
+        "x": "skateboard",
+        "y": 16
+      },
+      {
+        "x": "others",
+        "y": 209
+      }
+    ]
+  },
+  {
+    "id": "france",
+    "color": "hsl(46, 70%, 50%)",
+    "data": [
+      {
+        "x": "plane",
+        "y": 293
+      },
+      {
+        "x": "helicopter",
+        "y": 162
+      },
+      {
+        "x": "boat",
+        "y": 148
+      },
+      {
+        "x": "train",
+        "y": 287
+      },
+      {
+        "x": "subway",
+        "y": 246
+      },
+      {
+        "x": "bus",
+        "y": 163
+      },
+      {
+        "x": "car",
+        "y": 129
+      },
+      {
+        "x": "moto",
+        "y": 183
+      },
+      {
+        "x": "bicycle",
+        "y": 32
+      },
+      {
+        "x": "horse",
+        "y": 97
+      },
+      {
+        "x": "skateboard",
+        "y": 210
+      },
+      {
+        "x": "others",
+        "y": 84
+      }
+    ]
+  },
+  {
+    "id": "us",
+    "color": "hsl(336, 70%, 50%)",
+    "data": [
+      {
+        "x": "plane",
+        "y": 220
+      },
+      {
+        "x": "helicopter",
+        "y": 108
+      },
+      {
+        "x": "boat",
+        "y": 20
+      },
+      {
+        "x": "train",
+        "y": 171
+      },
+      {
+        "x": "subway",
+        "y": 289
+      },
+      {
+        "x": "bus",
+        "y": 223
+      },
+      {
+        "x": "car",
+        "y": 3
+      },
+      {
+        "x": "moto",
+        "y": 299
+      },
+      {
+        "x": "bicycle",
+        "y": 204
+      },
+      {
+        "x": "horse",
+        "y": 72
+      },
+      {
+        "x": "skateboard",
+        "y": 208
+      },
+      {
+        "x": "others",
+        "y": 246
+      }
+    ]
+  },
+  {
+    "id": "germany",
+    "color": "hsl(100, 70%, 50%)",
+    "data": [
+      {
+        "x": "plane",
+        "y": 226
+      },
+      {
+        "x": "helicopter",
+        "y": 91
+      },
+      {
+        "x": "boat",
+        "y": 159
+      },
+      {
+        "x": "train",
+        "y": 225
+      },
+      {
+        "x": "subway",
+        "y": 21
+      },
+      {
+        "x": "bus",
+        "y": 261
+      },
+      {
+        "x": "car",
+        "y": 1
+      },
+      {
+        "x": "moto",
+        "y": 205
+      },
+      {
+        "x": "bicycle",
+        "y": 248
+      },
+      {
+        "x": "horse",
+        "y": 211
+      },
+      {
+        "x": "skateboard",
+        "y": 216
+      },
+      {
+        "x": "others",
+        "y": 241
+      }
+    ]
+  },
+  {
+    "id": "norway",
+    "color": "hsl(325, 70%, 50%)",
+    "data": [
+      {
+        "x": "plane",
+        "y": 234
+      },
+      {
+        "x": "helicopter",
+        "y": 33
+      },
+      {
+        "x": "boat",
+        "y": 292
+      },
+      {
+        "x": "train",
+        "y": 282
+      },
+      {
+        "x": "subway",
+        "y": 255
+      },
+      {
+        "x": "bus",
+        "y": 203
+      },
+      {
+        "x": "car",
+        "y": 49
+      },
+      {
+        "x": "moto",
+        "y": 57
+      },
+      {
+        "x": "bicycle",
+        "y": 180
+      },
+      {
+        "x": "horse",
+        "y": 10
+      },
+      {
+        "x": "skateboard",
+        "y": 1
+      },
+      {
+        "x": "others",
+        "y": 178
+      }
+    ]
+  }
+]
 
 const IndexPage = () => {
 
@@ -45,7 +323,7 @@ const IndexPage = () => {
         <Heading as="h3" size="md" mb={4} variant="section-title">
           Current Status
         </Heading>
-        <GitStatus/>
+        <MyResponsiveLine data={data} />
       </Box>
       <Box>
         <Heading as="h3" size="md" mb={4} variant="section-title">
@@ -125,9 +403,6 @@ const IndexPage = () => {
           <Heading as="h4" size="md" mb={4} variant="section-title">
             Personal Projects
           </Heading>
-          <Link href="/overview">
-            <Button colorScheme='blue' variant='outline' size='sm'/>
-          </Link>
         </Box>
       </Box>
     </Container>

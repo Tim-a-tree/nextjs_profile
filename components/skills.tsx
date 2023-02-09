@@ -13,11 +13,12 @@ function SkillStacks() {
                     </TabList>
                     <TabPanels>
                         {data.map((tab, index) => (
-                            <TabPanel p={4} key={index}>
+                            <TabPanel key={index}>
                                 <Center>
                                     <Stack as="span" key={index} direction='row' paddingBlock={4}>
                                         <SimpleGrid columns={5} spacing={3}>
-                                            {tab.contents.map((content) => (
+                                            {
+                                                tab.contents.map((content) => (
                                                     <Badge textAlign={'center'} key={index} color={initialColor = RandomColors(initialColor)} >{content}</Badge>
                                             ))}    
                                         </SimpleGrid>
